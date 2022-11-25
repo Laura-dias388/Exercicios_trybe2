@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {// queryInterface é usado pela biblioteca para modificar o banco de dados;
+  async up (queryInterface, Sequelize) {
     await queryInterface.createTable('Users', {
       id: {
         allowNull: false,
@@ -27,7 +27,7 @@ module.exports = {
     });
   },
 
-  async down (queryInterface, Sequelize) {// O objeto Sequelize armazena os tipos de dados disponíveis no contexto do banco, por exemplo varchar, string, integer, date etc;
+  async down (queryInterface, Sequelize) {
     await queryInterface.dropTable('Users');
   }
 };
